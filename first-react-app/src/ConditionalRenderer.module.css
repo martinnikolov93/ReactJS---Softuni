@@ -1,0 +1,9 @@
+.button {
+  background-color: #358bb5;
+  color: seashell;
+  border: #358bb5 solid 1px;
+  height: 30px;
+  width: 100px;
+  border-radius: 5px;
+  margin: 2px;
+}
