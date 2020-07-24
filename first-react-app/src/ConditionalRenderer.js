@@ -29,7 +29,7 @@ class ConditionalRenderer extends React.Component {
         {this.state.showContent && 
           <div>
             Text will be hidden if above button is clicked
-            <div>{this.context} - this value is coming from context without usage of props</div>
+            <div>{this.context} - this value is coming from context (home component) without usage of props</div>
           </div>   
         }
       </div>

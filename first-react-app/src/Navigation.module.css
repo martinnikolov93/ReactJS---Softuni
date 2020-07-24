@@ -1,5 +1,24 @@
 nav {
-    text-align: center;
-    background: #52bad6;
-    height: 30px;
+  text-align: center;
+  background: #52bad6;
+  height: 40px;
+  border: black solid 1px;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.nav-link {
+  background-color: #358bb5;
+  color: seashell;
+  border: #358bb5 solid 1px;
+  height: 30px;
+  width: 100%;
+  border-radius: 5px;
+  margin: 4px;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.nav-link:hover {
+  background-color: #255b75;
 }

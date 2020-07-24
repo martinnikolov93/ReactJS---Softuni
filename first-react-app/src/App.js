@@ -1,40 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
-import CounterButton from './CounterButton';
-import ConditionalRenderer from './ConditionalRenderer';
-import TextInput from './TextInput';
-import AppContext from './AppContext';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+
+import Navigation from './Navigation'
+import Home from './Home';
+import About from './About';
+import Forms from './Forms';
+
 import './App.css';
-
-
 
 class App extends React.Component {
 
   render() {
 
     fetch('https://jsonplaceholder.typicode.com/posts')
-    .then((response) => response.json())
-    .then((myJson) => console.log(myJson))
-    .catch((myErr) => console.error(myErr));
+      .then((response) => response.json())
+      .then((myJson) => console.log(myJson))
+      .catch((myErr) => console.error(myErr));
 
-    
+
     return (
       <div className="App">
-        <header className="App-header">
+        <Router>
+          <header>
+            <Navigation />
+          </header>
 
-          <img src={logo} className="App-logo" alt="logo" />
-
-          <CounterButton />
-          <CounterButton />
-          <CounterButton />
-
-          <TextInput />
-
-          <AppContext.Provider value="Marto">
-            <ConditionalRenderer />
-          </AppContext.Provider>
-
-        </header>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/forms" component={Forms} />
+          </Switch>
+        </Router>
       </div>
     )
   }

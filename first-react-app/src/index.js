@@ -1,27 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import App from './App'
+
 import './index.css';
-import App from './App';
-import About from './About';
+
 import * as serviceWorker from './serviceWorker';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
-import Navigation from './Navigation'
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <Navigation />
-
-      <Switch>
-        <Route path="/" exact component={App} />
-        <Route path="/about" exact component={About} />
-      </Switch>
-    </Router>
-
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
