@@ -1,5 +1,6 @@
 import React from 'react';
-import styles from './CounterButton.module.css'
+//import styles from './CounterButton.module.css'
+import Button from '@material-ui/core/Button';
 
 class CounterButton extends React.Component {
   constructor(props) {
@@ -13,7 +14,12 @@ class CounterButton extends React.Component {
 
   render() {
     return (
-      <button className={styles.button} onClick={this.increaseClicks}>Clicks {this.state.clicks}</button>
+      <div>
+        <Button onClick={this.increaseClicks} variant="contained" color="primary">
+          Clicks {this.state.clicks}
+        </Button>
+        {/* <button className={styles.button} onClick={this.increaseClicks}>Clicks {this.state.clicks}</button> */}
+      </div>
     )
   }
 }

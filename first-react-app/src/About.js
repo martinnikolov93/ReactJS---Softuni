@@ -3,7 +3,7 @@ import React from 'react'
 function About(){
     return (
         <div>
-            About component
+            First react app for learning components, context, routing, forms.
         </div>
     )
 }

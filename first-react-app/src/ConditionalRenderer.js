@@ -1,6 +1,6 @@
 import React from 'react';
 import AppContext from './AppContext';
-import styles from './ConditionalRenderer.module.css'
+import styles from './buttons.module.css'
 
 class ConditionalRenderer extends React.Component {
 

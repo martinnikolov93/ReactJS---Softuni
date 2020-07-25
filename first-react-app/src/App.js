@@ -10,19 +10,13 @@ import Navigation from './Navigation'
 import Home from './Home';
 import About from './About';
 import Forms from './Forms';
+import DataIterator from './DataIterator';
 
 import './App.css';
 
 class App extends React.Component {
 
   render() {
-
-    fetch('https://jsonplaceholder.typicode.com/posts')
-      .then((response) => response.json())
-      .then((myJson) => console.log(myJson))
-      .catch((myErr) => console.error(myErr));
-
-
     return (
       <div className="App">
         <Router>
@@ -34,6 +28,7 @@ class App extends React.Component {
             <Route path="/" exact component={Home} />
             <Route path="/about" component={About} />
             <Route path="/forms" component={Forms} />
+            <Route path="/iteratingdata" component={DataIterator} />
           </Switch>
         </Router>
       </div>
