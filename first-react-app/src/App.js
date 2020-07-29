@@ -24,12 +24,15 @@ class App extends React.Component {
             <Navigation />
           </header>
 
+          <div>
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/about" component={About} />
             <Route path="/forms" component={Forms} />
             <Route path="/iteratingdata" component={DataIterator} />
           </Switch>
+          </div>
+          
         </Router>
       </div>
     )
